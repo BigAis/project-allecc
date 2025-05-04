@@ -1,0 +1,56 @@
+// Responsive Media Queries
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+  }
+  
+  // Flexbox Center
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Glass Morphism Effect
+  @mixin glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  // Glow Effect
+  @mixin glow-effect($color: $primary-color) {
+    box-shadow: 0 0 20px rgba($color, 0.3);
+    transition: box-shadow $transition-speed $transition-easing;
+  
+    &:hover {
+      box-shadow: 0 0 30px rgba($color, 0.5);
+    }
+  }
+  
+  // Text Gradient
+  @mixin text-gradient($color1: $primary-color, $color2: $secondary-color) {
+    background: linear-gradient(45deg, $color1, $color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  // Card Style
+  @mixin card {
+    @include glass-morphism;
+    border-radius: 12px;
+    padding: $spacing-large;
+    transition: all $transition-speed $transition-easing;
+    
+    &:hover {
+      transform: translateY(-5px);
+      @include glow-effect;
+    }
+  }

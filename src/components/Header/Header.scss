@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  @include glass-morphism;
+  padding: $spacing-medium 0;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 2px;
+    
+    &:hover {
+      @include text-gradient;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: $spacing-large;
+
+    li {
+      a {
+        color: $text-color;
+        font-weight: 500;
+        transition: color $transition-speed $transition-easing;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: $primary-color;
+          transition: width $transition-speed $transition-easing;
+        }
+
+        &:hover {
+          color: $primary-color;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(medium) {
+    &__menu {
+      display: none; // For now, we'll hide on mobile. You can add a hamburger menu later
+    }
+  }
+}
