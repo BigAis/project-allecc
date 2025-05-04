@@ -1,0 +1,119 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero {
+  min-height: 100vh;
+  @include flex-center;
+  position: relative;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    &-gradient {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba($primary-color, 0.1) 0%, transparent 50%),
+                  linear-gradient(135deg, $background-dark 0%, $background-light 100%);
+    }
+
+    &-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 1px 1px, rgba($primary-color, 0.05) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: patternMove 30s linear infinite;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+    padding: $spacing-xlarge 0;
+  }
+
+  &__title {
+    @include text-gradient;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: $spacing-medium;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-family: $font-heading;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: $text-color;
+    margin-bottom: $spacing-medium;
+  }
+
+  &__description {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: $text-secondary;
+    max-width: 600px;
+    margin: 0 auto $spacing-large;
+    line-height: 1.8;
+  }
+
+  &__cta {
+    display: flex;
+    gap: $spacing-medium;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: $spacing-large;
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    bottom: $spacing-large;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: $text-secondary;
+    font-size: 0.9rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+
+    span {
+      display: block;
+      margin-bottom: $spacing-small;
+    }
+
+    .scroll-arrow {
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid $primary-color;
+      border-bottom: 2px solid $primary-color;
+      transform: rotate(45deg);
+      margin: 0 auto;
+    }
+  }
+}
+
+// Animations
+@keyframes patternMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -10px);
+  }
+  60% {
+    transform: translate(-50%, -5px);
+  }
+}

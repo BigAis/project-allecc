@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.footer {
+  background-color: $background-light;
+  padding: $spacing-xlarge 0 $spacing-large;
+  margin-top: $spacing-xlarge;
+  border-top: 1px solid rgba($primary-color, 0.1);
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $spacing-xlarge;
+    margin-bottom: $spacing-xlarge;
+
+    @include respond-to(medium) {
+      grid-template-columns: 1fr;
+      gap: $spacing-large;
+    }
+  }
+
+  &__brand {
+    h3 {
+      font-family: $font-heading;
+      color: $primary-color;
+      margin-bottom: $spacing-small;
+    }
+
+    p {
+      color: $text-secondary;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-large;
+
+    @include respond-to(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__team, &__contact {
+    h4 {
+      font-family: $font-heading;
+      color: $text-color;
+      margin-bottom: $spacing-medium;
+    }
+
+    p {
+      margin-bottom: $spacing-small;
+      color: $text-secondary;
+    }
+  }
+
+  &__social {
+    list-style: none;
+    display: flex;
+    gap: $spacing-medium;
+
+    li {
+      a {
+        color: $text-secondary;
+        transition: color $transition-speed $transition-easing;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding-top: $spacing-large;
+    border-top: 1px solid rgba($text-secondary, 0.1);
+
+    p {
+      color: $text-secondary;
+      font-size: 0.9rem;
+    }
+  }
+}

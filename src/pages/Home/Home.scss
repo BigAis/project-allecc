@@ -1,0 +1,143 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.home {
+  .hero {
+    min-height: 100vh;
+    @include flex-center;
+    background: linear-gradient(135deg, $background-dark 0%, $background-light 100%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba($primary-color, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    &__content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1s ease-out;
+    }
+
+    &__title {
+      @include text-gradient;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: $spacing-medium;
+    }
+
+    &__subtitle {
+      font-family: $font-heading;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      color: $text-color;
+      margin-bottom: $spacing-medium;
+    }
+
+    &__description {
+      font-size: 1.2rem;
+      color: $text-secondary;
+      max-width: 600px;
+      margin: 0 auto $spacing-large;
+    }
+
+    &__cta {
+      display: flex;
+      gap: $spacing-medium;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .featured-game {
+    background-color: $background-light;
+
+    h2 {
+      text-align: center;
+      margin-bottom: $spacing-xlarge;
+      color: $primary-color;
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-xlarge;
+      align-items: center;
+
+      @include respond-to(medium) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__info {
+      h3 {
+        color: $text-color;
+        margin-bottom: $spacing-small;
+      }
+    }
+
+    &__genre {
+      color: $secondary-color;
+      font-family: $font-heading;
+      font-size: 1.1rem;
+      margin-bottom: $spacing-medium;
+    }
+
+    &__description {
+      color: $text-secondary;
+      margin-bottom: $spacing-large;
+      line-height: 1.8;
+    }
+
+    &__features {
+      list-style: none;
+      margin-bottom: $spacing-large;
+
+      li {
+        color: $text-secondary;
+        padding: $spacing-small 0;
+        position: relative;
+        padding-left: $spacing-large;
+
+        &::before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: $primary-color;
+          font-size: 1.5rem;
+          line-height: 1;
+        }
+      }
+    }
+
+    &__visual {
+      @include card;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .placeholder-image {
+        @include flex-center;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba($primary-color, 0.1), rgba($secondary-color, 0.1));
+        border-radius: 8px;
+        
+        span {
+          color: $text-secondary;
+          font-size: 1.5rem;
+          font-family: $font-heading;
+        }
+      }
+    }
+  }
+}
