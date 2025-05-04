@@ -1,3 +1,7 @@
 // Forward all variables and mixins
 @forward './variables';
 @forward './mixins';
+
+// Export sass built-in modules
+@forward 'sass:color';
+@forward 'sass:map';
