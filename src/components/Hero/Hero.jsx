@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import './Hero.scss';
 
 const Hero = ({ 
@@ -27,12 +27,20 @@ const Hero = ({
           
           {showButtons && (
             <div className="hero__cta">
-              <Link to={primaryButtonLink} className="btn btn--primary">
+              <Button 
+                to={primaryButtonLink} 
+                variant="primary"
+                size="large"
+              >
                 {primaryButtonText}
-              </Link>
-              <Link to={secondaryButtonLink} className="btn btn--secondary">
+              </Button>
+              <Button 
+                to={secondaryButtonLink} 
+                variant="secondary"
+                size="large"
+              >
                 {secondaryButtonText}
-              </Link>
+              </Button>
             </div>
           )}
         </div>

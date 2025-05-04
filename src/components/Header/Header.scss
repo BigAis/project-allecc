@@ -5,65 +5,102 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 997;
   @include glass-morphism;
   padding: $spacing-medium 0;
 
-  &__nav {
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 $spacing-large;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__logo {
-    font-family: $font-heading;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: $primary-color;
-    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+    &-text {
+      font-family: $font-heading;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $primary-color;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    
+    &-tagline {
+      font-size: 0.75rem;
+      color: $text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0.25rem;
+    }
     
     &:hover {
-      @include text-gradient;
+      .header__logo-text {
+        @include text-gradient;
+      }
     }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xlarge;
   }
 
   &__menu {
     display: flex;
     list-style: none;
     gap: $spacing-large;
+  }
 
-    li {
-      a {
-        color: $text-color;
-        font-weight: 500;
-        transition: color $transition-speed $transition-easing;
-        position: relative;
+  &__link {
+    color: $text-color;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color $transition-speed $transition-easing;
+    position: relative;
+    padding: $spacing-small 0;
 
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: $primary-color;
-          transition: width $transition-speed $transition-easing;
-        }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $primary-color;
+      transition: width $transition-speed $transition-easing;
+    }
 
-        &:hover {
-          color: $primary-color;
+    &:hover, &.active {
+      color: $primary-color;
 
-          &::after {
-            width: 100%;
-          }
-        }
+      &::after {
+        width: 100%;
       }
     }
   }
 
+  &__actions {
+    display: flex;
+    gap: $spacing-medium;
+  }
+
   @include respond-to(medium) {
+    padding-left: 80px; // Space for sidebar toggle
+
     &__menu {
-      display: none; // For now, we'll hide on mobile. You can add a hamburger menu later
+      display: none;
+    }
+
+    &__container {
+      padding: 0 $spacing-medium;
     }
   }
 }

@@ -1,0 +1,177 @@
+@use '../../styles' as *;
+
+.documentation {
+  &__header {
+    padding: 10rem 0 4rem;
+    background: linear-gradient(135deg, $background-light 0%, $background-dark 100%);
+    text-align: center;
+
+    h1 {
+      @include text-gradient;
+      margin-bottom: $spacing-medium;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: $text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    padding: $spacing-xlarge 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: $spacing-xlarge;
+    align-items: start;
+
+    @include respond-to(medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__sidebar {
+    position: sticky;
+    top: 100px;
+
+    @include respond-to(medium) {
+      position: static;
+      margin-bottom: $spacing-xlarge;
+    }
+  }
+
+  &__nav {
+    @include card;
+
+    h3 {
+      font-family: $font-heading;
+      color: $primary-color;
+      font-size: 1.25rem;
+      margin-bottom: $spacing-medium;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    &-link {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: $spacing-small $spacing-medium;
+      color: $text-secondary;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all $transition-speed $transition-easing;
+      margin-bottom: $spacing-small;
+      font-size: 0.95rem;
+
+      &:hover {
+        background: rgba($primary-color, 0.1);
+        color: $primary-color;
+      }
+
+      &.active {
+        background: rgba($primary-color, 0.2);
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__main {
+    min-height: 500px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-medium;
+    margin-top: $spacing-xlarge;
+    padding-top: $spacing-large;
+    border-top: 1px solid rgba($primary-color, 0.1);
+  }
+}
+
+.doc-content {
+  @include card;
+  
+  h2 {
+    color: $primary-color;
+    margin-bottom: $spacing-large;
+    font-size: 2rem;
+  }
+
+  h3 {
+    color: $text-color;
+    margin-top: $spacing-xlarge;
+    margin-bottom: $spacing-medium;
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+    margin-bottom: $spacing-medium;
+    font-size: 1.1rem;
+  }
+
+  ul, ol {
+    margin-bottom: $spacing-large;
+    padding-left: $spacing-large;
+
+    li {
+      color: $text-secondary;
+      margin-bottom: $spacing-small;
+      line-height: 1.6;
+    }
+  }
+
+  ul li {
+    position: relative;
+    padding-left: $spacing-medium;
+
+    &::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: $primary-color;
+    }
+  }
+
+  code {
+    background: rgba($primary-color, 0.1);
+    color: $primary-color;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background: $background-dark;
+    border: 1px solid rgba($primary-color, 0.1);
+    border-radius: 8px;
+    padding: $spacing-large;
+    margin: $spacing-large 0;
+    overflow-x: auto;
+
+    code {
+      background: transparent;
+      color: $text-color;
+      padding: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+
+  strong {
+    color: $text-color;
+    font-weight: 600;
+  }
+}

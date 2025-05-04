@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from '../../components/Button/Button';
 import './Home.scss';
 
 const Home = () => {
@@ -13,12 +13,12 @@ const Home = () => {
               Creating immersive gaming experiences that push the boundaries of imagination
             </p>
             <div className="hero__cta">
-              <Link to="/lizards-vs-humans" className="btn btn--primary">
+              <Button to="/lizards-vs-humans" variant="primary" size="large">
                 Discover Lizards Vs Humans
-              </Link>
-              <Link to="/about" className="btn btn--secondary">
+              </Button>
+              <Button to="/about" variant="secondary" size="large">
                 Learn More
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -42,9 +42,9 @@ const Home = () => {
                 <li>Immersive sci-fi environments</li>
                 <li>Strategic combat system</li>
               </ul>
-              <Link to="/lizards-vs-humans" className="btn btn--primary">
+              <Button to="/lizards-vs-humans" variant="primary">
                 Learn More
-              </Link>
+              </Button>
             </div>
             <div className="featured-game__visual">
               {/* Placeholder for game screenshot */}

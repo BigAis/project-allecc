@@ -1,20 +1,56 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import Button from '../Button/Button';
 import './Header.scss';
 
 const Header = () => {
+  const location = useLocation();
+
+  const navigationLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/lizards-vs-humans', label: 'Games' },
+    { path: '/documentation', label: 'Docs' },
+  ];
+
   return (
     <header className="header">
-      <div className="container">
+      <div className="header__container">
+        <Link to="/" className="header__logo">
+          <span className="header__logo-text">PROJECT ALLECC</span>
+          <span className="header__logo-tagline">Game Studio</span>
+        </Link>
+        
         <nav className="header__nav">
-          <Link to="/" className="header__logo">
-            PROJECT ALLECC
-          </Link>
-          
           <ul className="header__menu">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/lizards-vs-humans">Lizards Vs Humans</Link></li>
+            {navigationLinks.map((link) => (
+              <li key={link.path}>
+                <Link 
+                  to={link.path}
+                  className={`header__link ${location.pathname === link.path ? 'active' : ''}`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
+          
+          <div className="header__actions">
+            <Button 
+              variant="ghost" 
+              size="small"
+              href="https://github.com/BigAis/project-allecc"
+              icon="📦"
+            >
+              GitHub
+            </Button>
+            <Button 
+              to="/lizards-vs-humans" 
+              variant="primary" 
+              size="small"
+            >
+              Play Now
+            </Button>
+          </div>
         </nav>
       </div>
     </header>

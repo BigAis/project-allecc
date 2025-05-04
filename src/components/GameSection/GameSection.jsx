@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import './GameSection.scss';
 
 const GameSection = ({
@@ -28,9 +28,9 @@ const GameSection = ({
               </ul>
             )}
             
-            <Link to={link} className="btn btn--primary">
+            <Button to={link} variant="primary">
               {buttonText}
-            </Link>
+            </Button>
           </div>
           
           <div className="game-section__visual">
