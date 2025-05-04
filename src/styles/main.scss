@@ -1,6 +1,10 @@
-// Import Variables and Mixins
-@import './variables';
-@import './mixins';
+// Use the new @use syntax with namespaces
+@use 'sass:color';
+@use 'sass:map';
+
+// Import local modules
+@use './variables' as *;
+@use './mixins' as *;
 
 // Import Google Fonts for futuristic look
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
@@ -54,7 +58,7 @@ a {
   transition: color $transition-speed $transition-easing;
 
   &:hover {
-    color: lighten($primary-color, 10%);
+    color: color.adjust($primary-color, $lightness: 10%);
   }
 }
 
@@ -90,7 +94,7 @@ a {
     color: $background-dark;
 
     &:hover {
-      background: darken($primary-color, 10%);
+      background: color.adjust($primary-color, $lightness: -10%);
       transform: translateY(-2px);
     }
   }
