@@ -88,10 +88,10 @@ const Sidebar = () => {
           <Button 
             variant="secondary" 
             size="small"
-            href="https://github.com/BigAis/project-allecc"
-            icon="🔗"
+            to="/about"
+            icon="ℹ️"
           >
-            View on GitHub
+            About Project Allecc
           </Button>
         </div>
       </aside>

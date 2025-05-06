@@ -36,14 +36,6 @@ const Header = () => {
           
           <div className="header__actions">
             <Button 
-              variant="ghost" 
-              size="small"
-              href="https://github.com/BigAis/project-allecc"
-              icon="📦"
-            >
-              GitHub
-            </Button>
-            <Button 
               to="/lizards-vs-humans" 
               variant="primary" 
               size="small"

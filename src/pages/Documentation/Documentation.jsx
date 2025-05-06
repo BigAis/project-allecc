@@ -18,7 +18,7 @@ const Documentation = () => {
           </p>
           <h3>Quick Start Guide</h3>
           <ol>
-            <li>Clone the repository from GitHub</li>
+            <li>Download the game resources</li>
             <li>Install dependencies with <code>npm install</code></li>
             <li>Start the development server with <code>npm run dev</code></li>
             <li>Build for production with <code>npm run build</code></li>
@@ -95,7 +95,7 @@ PUT /api/v1/matches/:id/complete`}</code>
             <li>Create a new mod project using the template</li>
             <li>Implement your modifications</li>
             <li>Test in the development environment</li>
-            <li>Publish to the Steam Workshop</li>
+            <li>Submit to our mod portal</li>
           </ol>
           <h3>Mod Structure</h3>
           <pre>
@@ -129,7 +129,7 @@ PUT /api/v1/matches/:id/complete`}</code>
             <li><strong>Frontend:</strong> React 19 with Vite</li>
             <li><strong>Styling:</strong> SCSS with modern CSS features</li>
             <li><strong>Routing:</strong> React Router v7</li>
-            <li><strong>Deployment:</strong> GitHub Pages with CI/CD</li>
+            <li><strong>Deployment:</strong> Custom deployment pipeline</li>
           </ul>
           <h3>Game Development</h3>
           <ul>
@@ -140,8 +140,8 @@ PUT /api/v1/matches/:id/complete`}</code>
           </ul>
           <h3>Development Tools</h3>
           <ul>
-            <li><strong>Version Control:</strong> Git & GitHub</li>
-            <li><strong>CI/CD:</strong> GitHub Actions</li>
+            <li><strong>Version Control:</strong> Private repositories</li>
+            <li><strong>CI/CD:</strong> Custom deployment pipeline</li>
             <li><strong>Testing:</strong> Jest & React Testing Library</li>
             <li><strong>Code Quality:</strong> ESLint & Prettier</li>
           </ul>
@@ -159,10 +159,10 @@ PUT /api/v1/matches/:id/complete`}</code>
           </p>
           <h3>How to Contribute</h3>
           <ol>
-            <li>Fork the repository on GitHub</li>
-            <li>Create a feature branch</li>
+            <li>Contact our development team</li>
+            <li>Sign our contributor agreement</li>
             <li>Make your changes</li>
-            <li>Submit a pull request</li>
+            <li>Submit for review</li>
           </ol>
           <h3>Code Standards</h3>
           <ul>
@@ -171,12 +171,12 @@ PUT /api/v1/matches/:id/complete`}</code>
             <li>Include tests for new features</li>
             <li>Update documentation as needed</li>
           </ul>
-          <h3>Pull Request Process</h3>
+          <h3>Review Process</h3>
           <ol>
             <li>Ensure your code follows our style guidelines</li>
             <li>Update the README.md with details of changes if needed</li>
             <li>Increase version numbers in any examples files and the README.md</li>
-            <li>The PR will be merged once you have the sign-off of two developers</li>
+            <li>Your contribution will be reviewed by our development team</li>
           </ol>
           <h3>Code of Conduct</h3>
           <p>
@@ -224,18 +224,18 @@ PUT /api/v1/matches/:id/complete`}</code>
                 <Button 
                   variant="secondary" 
                   size="small"
-                  href="https://github.com/BigAis/project-allecc/issues"
-                  icon="🐛"
+                  to="/contact"
+                  icon="✉️"
                 >
-                  Report an Issue
+                  Contact Support
                 </Button>
                 <Button 
                   variant="primary" 
                   size="small"
-                  href="https://github.com/BigAis/project-allecc/pulls"
-                  icon="🔀"
+                  to="/about"
+                  icon="👥"
                 >
-                  Contribute
+                  Meet Our Team
                 </Button>
               </div>
             </main>
