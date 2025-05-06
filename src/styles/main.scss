@@ -136,19 +136,16 @@ a {
   &__main {
     flex: 1;
     margin-top: 80px; // Header height
-    
-    @include respond-to(medium) {
-      margin-left: 0; // Remove sidebar margin on mobile
-    }
-    
-    @media (min-width: 992px) {
-      margin-left: 280px; // Sidebar width on larger screens
-    }
+    margin-left: 0; // No sidebar margin by default since sidebar is hidden
+    padding-left: 3rem; // Space for the hamburger menu
+    transition: all 0.3s ease;
   }
   
   .container {
     padding-left: $spacing-large;
     padding-right: $spacing-large;
+    max-width: 1200px;
+    margin: 0 auto;
     
     @include respond-to(medium) {
       padding-left: $spacing-medium;
