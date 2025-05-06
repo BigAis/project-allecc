@@ -137,8 +137,46 @@ a {
     flex: 1;
     margin-top: 80px; // Header height
     
-    @include respond-to(large) {
-      margin-left: 280px; // Sidebar width
+    @include respond-to(medium) {
+      margin-left: 0; // Remove sidebar margin on mobile
     }
+    
+    @media (min-width: 992px) {
+      margin-left: 280px; // Sidebar width on larger screens
+    }
+  }
+  
+  .container {
+    padding-left: $spacing-large;
+    padding-right: $spacing-large;
+    
+    @include respond-to(medium) {
+      padding-left: $spacing-medium;
+      padding-right: $spacing-medium;
+    }
+  }
+}
+
+// Scroll animation classes
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  &--delay-1 {
+    transition-delay: 0.2s;
+  }
+  
+  &--delay-2 {
+    transition-delay: 0.4s;
+  }
+  
+  &--delay-3 {
+    transition-delay: 0.6s;
   }
 }

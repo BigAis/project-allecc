@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../../styles' as *;
 
 .header {
@@ -16,6 +17,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @media (min-width: 992px) {
+      margin-left: 280px; // Sidebar width
+      width: calc(100% - 280px);
+    }
+    
+    @include respond-to(medium) {
+      padding: 0 $spacing-medium;
+    }
   }
 
   &__logo {

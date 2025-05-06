@@ -7,12 +7,12 @@ const Home = () => {
       <section className="hero">
         <div className="container">
           <div className="hero__content">
-            <h1 className="hero__title">PROJECT ALLECC</h1>
-            <p className="hero__subtitle">Indie Game Development Studio</p>
-            <p className="hero__description">
+            <h1 className="hero__title animate-on-scroll">PROJECT ALLECC</h1>
+            <p className="hero__subtitle animate-on-scroll animate-on-scroll--delay-1">Indie Game Development Studio</p>
+            <p className="hero__description animate-on-scroll animate-on-scroll--delay-2">
               Creating immersive gaming experiences that push the boundaries of imagination
             </p>
-            <div className="hero__cta">
+            <div className="hero__cta animate-on-scroll animate-on-scroll--delay-3">
               <Button to="/lizards-vs-humans" variant="primary" size="large">
                 Discover Lizards Vs Humans
               </Button>
@@ -26,9 +26,9 @@ const Home = () => {
 
       <section className="featured-game section">
         <div className="container">
-          <h2>Latest Release</h2>
+          <h2 className="animate-on-scroll">Latest Release</h2>
           <div className="featured-game__content">
-            <div className="featured-game__info">
+            <div className="featured-game__info animate-on-scroll animate-on-scroll--delay-1">
               <h3>Lizards Vs Humans</h3>
               <p className="featured-game__genre">FPS/TPS Sci-Fi Shooter</p>
               <p className="featured-game__description">
@@ -46,7 +46,7 @@ const Home = () => {
                 Learn More
               </Button>
             </div>
-            <div className="featured-game__visual">
+            <div className="featured-game__visual animate-on-scroll animate-on-scroll--delay-2">
               {/* Placeholder for game screenshot */}
               <div className="placeholder-image">
                 <span>Game Screenshot</span>

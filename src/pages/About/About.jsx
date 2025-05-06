@@ -5,14 +5,14 @@ const About = () => {
     <div className="about">
       <section className="about-hero">
         <div className="container">
-          <h1>About Project Allecc</h1>
-          <p className="lead">Pioneering the future of indie game development</p>
+          <h1 className="animate-on-scroll">About Project Allecc</h1>
+          <p className="lead animate-on-scroll animate-on-scroll--delay-1">Pioneering the future of indie game development</p>
         </div>
       </section>
 
       <section className="about-content section">
         <div className="container">
-          <div className="about__story">
+          <div className="about__story animate-on-scroll">
             <h2>Our Story</h2>
             <p>
               Project Allecc was founded with a vision to create immersive, innovative gaming experiences 
@@ -28,9 +28,9 @@ const About = () => {
           </div>
 
           <div className="about__team">
-            <h2>Meet Our Team</h2>
+            <h2 className="animate-on-scroll">Meet Our Team</h2>
             <div className="team-grid">
-              <div className="team-member">
+              <div className="team-member animate-on-scroll animate-on-scroll--delay-1">
                 <div className="team-member__image">
                   <div className="placeholder-avatar">IP</div>
                 </div>
@@ -42,7 +42,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="team-member">
+              <div className="team-member animate-on-scroll animate-on-scroll--delay-2">
                 <div className="team-member__image">
                   <div className="placeholder-avatar">VC</div>
                 </div>
@@ -57,21 +57,21 @@ const About = () => {
           </div>
 
           <div className="about__philosophy">
-            <h2>Our Philosophy</h2>
+            <h2 className="animate-on-scroll">Our Philosophy</h2>
             <div className="philosophy-grid">
-              <div className="philosophy-item">
+              <div className="philosophy-item animate-on-scroll">
                 <h3>Innovation First</h3>
                 <p>We believe in pushing boundaries and exploring new ideas in game design and technology.</p>
               </div>
-              <div className="philosophy-item">
+              <div className="philosophy-item animate-on-scroll animate-on-scroll--delay-1">
                 <h3>Player Experience</h3>
                 <p>Every decision we make is focused on creating memorable experiences for our players.</p>
               </div>
-              <div className="philosophy-item">
+              <div className="philosophy-item animate-on-scroll animate-on-scroll--delay-2">
                 <h3>Quality Over Quantity</h3>
                 <p>We take the time to polish every aspect of our games to ensure the best possible quality.</p>
               </div>
-              <div className="philosophy-item">
+              <div className="philosophy-item animate-on-scroll animate-on-scroll--delay-3">
                 <h3>Community Driven</h3>
                 <p>We actively listen to our community and value player feedback in shaping our games.</p>
               </div>
