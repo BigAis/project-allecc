@@ -8,9 +8,8 @@ const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
 
-  const toggleResume = () => {
-    const resumeUrl = '/Resume.pdf';
-    window.open(resumeUrl);
+  const toggleGamePage = () => {
+    window.open('/lizards-vs-humans', '_blank');
   };
 
   useEffect(() => {
@@ -42,7 +41,7 @@ const Navbar = () => {
           isSecondary ? 'secondary' : 'white'
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
-        <button onClick={toggleResume}>Resume</button>
+        <button onClick={toggleGamePage} className="px-4 py-2 bg-[#915EFF] rounded-md">Play Now</button>
       </li>
     </ul>
   );
@@ -61,10 +60,10 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+            <img src={logo} alt="Project Allecc" className="w-9 h-9 object-contain" />
             <p className="text-white text-[20px] font-bold cursor-pointer flex">
-              LOHIT&nbsp;
-              <span className="sm:block hidden">KOLLURI</span>
+              Project&nbsp;
+              <span className="sm:block hidden">Allecc</span>
             </p>
           </Link>
           {renderNavLinks(false)}

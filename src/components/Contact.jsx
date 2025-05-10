@@ -71,9 +71,9 @@ const Contact = () => {
         "template_mf5x3bh",
         {
           from_name: form.name,
-          to_name: "Lohit Kolluri",
+          to_name: "Project Allecc",
           from_email: form.email,
-          to_email: "lohitkolluri@gmail.com",
+          to_email: "contact@projectallecc.com",
           message: form.message,
         },
         "p-gXzzyvEhPaJ0XA-"
@@ -81,7 +81,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          setConfirmation("Thank you! I will get back to you as soon as possible.");
+          setConfirmation("Thank you for your message! Our team will get back to you soon.");
 
           setForm({
             name: "",
@@ -93,7 +93,7 @@ const Contact = () => {
       .catch((error) => {
         setLoading(false);
         console.error(error);
-        setConfirmation("Something went wrong. Please try again. :/");
+        setConfirmation("Something went wrong. Please try again later.");
       });
   };
 
@@ -101,7 +101,7 @@ const Contact = () => {
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact Me</h3>
+        <h3 className={styles.sectionHeadText}>Contact Us</h3>
 
         <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
           <InputField
@@ -109,7 +109,7 @@ const Contact = () => {
             name="name"
             value={form.name}
             onChange={handleChange}
-            placeholder="Insert Your name here..."
+            placeholder="What's your name?"
             type="text"
           />
           {nameError && <span className="text-red-500">{nameError}</span>}
@@ -129,7 +129,7 @@ const Contact = () => {
             name="message"
             value={form.message}
             onChange={handleChange}
-            placeholder="What you want to say...?"
+            placeholder="What would you like to say?"
             type="text"
           />
 
@@ -137,7 +137,7 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
           {confirmation && <p className="text-green-500">{confirmation}</p>}
         </form>

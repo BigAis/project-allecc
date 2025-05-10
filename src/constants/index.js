@@ -22,14 +22,20 @@ import {
   eduskill,
 } from "../assets";
 
+// We'll reuse these images for now, but in production you'd replace them with actual game dev related images
+
 export const navLinks = [
   {
     id: "about",
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "team",
+    title: "Team",
+  },
+  {
+    id: "games",
+    title: "Games",
   },
   {
     id: "contact",
@@ -37,134 +43,163 @@ export const navLinks = [
   },
 ];
 
-export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
-  { title: "Python", icon: python },
-  { title: "Java", icon: java },
+export const companyValues = [
+  { 
+    title: "Innovation", 
+    icon: c 
+  },
+  { 
+    title: "Quality", 
+    icon: cpp 
+  },
+  { 
+    title: "Player Experience", 
+    icon: python 
+  },
+  { 
+    title: "Community", 
+    icon: java 
+  },
 ];
 
 export const technologies = [
-  { name: "HTML 5", icon: html },
-  { name: "CSS 3", icon: css },
-  { name: "JavaScript", icon: javascript },
-  { name: "Rect JS", icon: reactjs },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "Node JS", icon: nodejs },
-  { name: "Three JS", icon: threejs },
-  { name: "git", icon: git },
+  { name: "Unreal Engine", icon: html },
+  { name: "Unity", icon: css },
+  { name: "C++", icon: javascript },
+  { name: "C#", icon: reactjs },
+  { name: "Blender", icon: tailwind },
+  { name: "Maya", icon: nodejs },
+  { name: "ZBrush", icon: threejs },
+  { name: "Git", icon: git },
 ];
 
-export const experiences = [
+export const companyHistory = [
   {
-    title: "AI/ML Intern",
-    company_name: "EduSkill Foundation | AWS Academy | AICTE",
-    icon: eduskill,
-    iconBg: "#161329",
-    date: "Sep 2023 - Nov 2023",
-    points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
-    ],
-  },
-  {
-    title: "Mathwork Ai Virtual Intern",
-    company_name: "Mathwork | AICTE",
+    title: "CEO & Founder",
+    teamMember: "Ioannis Papadopoulos",
     icon: mathwork,
     iconBg: "#161329",
-    date: "May 2023 - Sep 2023",
+    date: "Jan 2021 - Present",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "Founded Project Allecc with a vision to create innovative sci-fi games that challenge conventional gameplay.",
+      "Led the conceptualization and early development of 'Lizards Vs Humans'.",
+      "Built a team of passionate developers, artists, and designers to bring our games to life.",
+      "Secured initial funding and established partnerships with key industry players.",
     ],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
+    title: "Lead Game Designer",
+    teamMember: "Maria Konstantinou",
+    icon: eduskill,
+    iconBg: "#161329",
+    date: "Mar 2021 - Present",
+    points: [
+      "Developed the core gameplay mechanics for 'Lizards Vs Humans', focusing on species-specific abilities and balanced combat.",
+      "Created the game world lore and narrative structure, establishing the conflict between humans and reptilians.",
+      "Designed diverse game environments, from urban battlegrounds to alien landscapes.",
+      "Collaborates closely with art and development teams to ensure design vision is properly implemented.",
+    ],
+  },
+  {
+    title: "Lead Developer",
+    teamMember: "Dimitris Alexiou",
     icon: edunet,
     iconBg: "#161329",
-    date: "June 2023 - July 2023",
+    date: "Apr 2021 - Present",
     points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      "Leads the technical development of our Unreal Engine-based game systems.",
+      "Architected the networking infrastructure for multiplayer gameplay with emphasis on performance and anti-cheat measures.",
+      "Implemented advanced AI systems for NPC behaviors in campaign mode.",
+      "Mentors junior developers and establishes technical best practices for the studio.",
+    ],
+  },
+  {
+    title: "Early Access Launch",
+    teamMember: "Company Milestone",
+    icon: mathwork,
+    iconBg: "#161329",
+    date: "October 2024",
+    points: [
+      "Successfully launched 'Lizards Vs Humans' in Early Access on Steam.",
+      "Reached over 50,000 players in the first month.",
+      "Gathered crucial player feedback to guide future development.",
+      "Implemented first major content update based on community suggestions.",
     ],
   },
 ];
 
-export const projects = [
+export const games = [
   {
-    name: "WeatherPedia",
+    name: "Lizards Vs Humans",
     description:
-      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
+      "Our flagship multiplayer FPS set in an alternate reality where reptilian beings battle humans for control of Earth. Features unique species-specific abilities, diverse weapon systems, and tactical gameplay.",
     tags: [
-      { name: "Javascript", color: "blue-text-gradient" },
-      { name: "HTML", color: "green-text-gradient" },
-      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
-      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
+      { name: "FPS", color: "blue-text-gradient" },
+      { name: "Multiplayer", color: "green-text-gradient" },
+      { name: "Sci-Fi", color: "pink-text-gradient" },
+      { name: "Unreal Engine", color: "yellow-text-gradient" },
     ],
-    image: weatherpedia,
-    source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
+    image: weatherpedia, // Replace with actual game image
+    game_link: "https://store.steampowered.com/app/lizardsvhumans",
   },
   {
-    name: "Terminal Like Portfolio Website",
+    name: "Cosmic Pioneers",
     description:
-      "A terminal themed portfolio website that allows users to type into the terminal and use commands like a real terminal.",
+      "A space exploration sandbox game where players discover new planets, establish colonies, and uncover ancient alien technologies. Currently in early development.",
     tags: [
-      { name: "HTML", color: "blue-text-gradient" },
-      { name: "css", color: "green-text-gradient" },
-      { name: "Javascript", color: "pink-text-gradient" },
+      { name: "Sandbox", color: "blue-text-gradient" },
+      { name: "Space", color: "green-text-gradient" },
+      { name: "Exploration", color: "pink-text-gradient" },
     ],
-    image: termpw,
-    source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
+    image: termpw, // Replace with actual game image
+    game_link: "https://www.projectallecc.com/cosmic-pioneers",
   },
   {
-    name: "Mental Health Fitness Tracker",
+    name: "Neural Nexus",
     description:
-      "ML model that utilizes regression techniques to provide insights into mental health and make predictions based on the available data.",
+      "A cyberpunk puzzle adventure where players hack into digital systems using neural implants. Navigate corporate security and uncover a global conspiracy.",
     tags: [
-      { name: "Machine Learning", color: "blue-text-gradient" },
-      { name: "Jupyter Notebook", color: "green-text-gradient" },
-      { name: "Regression Algorithms", color: "pink-text-gradient" },
+      { name: "Cyberpunk", color: "blue-text-gradient" },
+      { name: "Puzzle", color: "green-text-gradient" },
+      { name: "Single-player", color: "pink-text-gradient" },
     ],
-    image: mhft,
-    source_code_link:
-      "https://github.com/lohitkolluri/mental_health_fitness_tracker",
+    image: mhft, // Replace with actual game image
+    game_link: "https://www.projectallecc.com/neural-nexus",
   },
   {
-    name: "PayloadMaster",
+    name: "Reptilian Rising",
     description:
-      "Tool to automate payload creation using the Metasploit framework",
+      "A mobile strategy game set in the 'Lizards Vs Humans' universe. Build your base, train troops, and conquer territories in an ongoing faction war.",
     tags: [
-      { name: "shell", color: "blue-text-gradient" },
+      { name: "Mobile", color: "blue-text-gradient" },
+      { name: "Strategy", color: "green-text-gradient" },
+      { name: "Free-to-Play", color: "pink-text-gradient" },
     ],
-    image: payloadmaster,
-    source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
+    image: payloadmaster, // Replace with actual game image
+    game_link: "https://play.google.com/store/apps/reptilianrising",
   },
   {
-    name: "CompileVortex",
+    name: "Echoes of Extinction",
     description:
-      "Tool to automate payload creation using the Metasploit framework",
+      "A narrative-driven adventure about the last human survivor on a post-apocalyptic Earth. Discover what happened to humanity while avoiding alien hunters.",
     tags: [
-      { name: "Javascript", color: "blue-text-gradient" },
-      { name: "CSS", color: "green-text-gradient" },
-      { name: "HTML", color: "pink-text-gradient" },
+      { name: "Adventure", color: "blue-text-gradient" },
+      { name: "Horror", color: "green-text-gradient" },
+      { name: "Survival", color: "pink-text-gradient" },
     ],
-    image: CompileVortex,
-    source_code_link: "https://github.com/lohitkolluri/CompileVortex",
+    image: CompileVortex, // Replace with actual game image
+    game_link: "https://www.projectallecc.com/echoes-of-extinction",
   },
   {
-    name: "Sketcher",
+    name: "Venom Labs",
     description:
-      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
+      "A VR experience where players take on the role of a reptilian scientist developing biological weapons. Features realistic lab simulation and moral choices.",
     tags: [
-      { name: "OpenCV", color: "blue-text-gradient" },
-      { name: "Matplotlib", color: "green-text-gradient" },
-      { name: "Python", color: "pink-text-gradient" },
+      { name: "VR", color: "blue-text-gradient" },
+      { name: "Simulation", color: "green-text-gradient" },
+      { name: "Sci-Fi", color: "pink-text-gradient" },
     ],
-
-    image: sketcher,
-    source_code_link: "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
+    image: sketcher, // Replace with actual game image
+    game_link: "https://www.oculus.com/experiences/venom-labs",
   },
 ];

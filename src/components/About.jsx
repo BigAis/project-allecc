@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Tilt } from 'react-tilt';
-import { services } from '../constants';
+import { companyValues } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ServiceCard = ({ index, title, icon }) => (
+const ValueCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
@@ -20,7 +20,7 @@ const ServiceCard = ({ index, title, icon }) => (
         }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
+        <img src={icon} alt={title} className="w-16 h-16 object-contain" loading="lazy" />
 
         <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
       </div>
@@ -32,24 +32,25 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className={styles.sectionSubText}>About Us</p>
+        <h2 className={styles.sectionHeadText}>Our Studio</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
-        to join a company that values innovation, collaboration, and continuous learning and am
-        confident that my enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
+        Project Allecc is an indie game development studio founded in 2021 by Ioannis Papadopoulos. 
+        Based in Thessaloniki, Greece, we're passionate about creating immersive sci-fi worlds and 
+        innovative gameplay experiences. Our team combines technical expertise with creative 
+        storytelling to develop unique games that challenge conventions. We're currently working 
+        on our flagship title, "Lizards Vs Humans" - a multiplayer FPS shooter set in an 
+        alternate universe where reptilian beings battle against humanity for control of Earth.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {companyValues.map((value, index) => (
+          <ValueCard key={value.title} index={index} {...value} />
         ))}
       </div>
     </>

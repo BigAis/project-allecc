@@ -15,21 +15,26 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">lohit</span>
+            <span className="text-[#915EFF]">Project Allecc</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do
+            We create
             <Typewriter
               options={{
-                strings: ["CyberSecurity", "Ai & ML", "NLP"],
+                strings: ["Immersive Worlds", "Epic Adventures", "Unforgettable Games"],
                 autoStart: true,
                 loop: true,
-                loopCount: Infinity,
                 deleteSpeed: "natural",
                 pauseFor: 1000,
               }}
             />
           </p>
+          
+          <div className="mt-8">
+            <button className="bg-[#915EFF] hover:bg-[#7D4FF0] text-white font-bold py-3 px-6 rounded-lg shadow-lg">
+              PLAY LIZARDS VS HUMANS
+            </button>
+          </div>
         </div>
       </div>
 
