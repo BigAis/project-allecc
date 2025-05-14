@@ -3,44 +3,29 @@ import { Link } from 'react-router-dom';
 import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
+import '../components/Sidebar/Sidebar.scss'; // Import the Sidebar styles
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   const [active, setActive] = useState('');
-  const [toggle, setToggle] = useState(false);
 
   const toggleGamePage = () => {
     window.open('/lizards-vs-humans', '_blank');
   };
 
-  useEffect(() => {
-    if (toggle) {
-      setActive('');
-    }
-  }, [toggle]);
-
-  const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+  const renderNavLinks = () => (
+    <ul className="list-none hidden sm:flex flex-row gap-6">
       {navLinks.map((link) => (
         <li
           key={link.id}
           className={`${
-            active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
+            active === link.title ? 'text-white' : 'text-white'
           } hover:text-white text-[20px] font-medium cursor-pointer`}
-          onClick={() => {
-            setActive(link.title);
-            if (isSecondary) {
-              setToggle(false);
-            }
-          }}
+          onClick={() => setActive(link.title)}
         >
           <a href={`#${link.id}`}>{link.title}</a>
         </li>
       ))}
-      <li
-        className={`text-${
-          isSecondary ? 'secondary' : 'white'
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
-      >
+      <li className="text-white hover:text-white text-[20px] font-medium cursor-pointer">
         <button onClick={toggleGamePage} className="px-4 py-2 bg-[#915EFF] rounded-md">Play Now</button>
       </li>
     </ul>
@@ -66,20 +51,12 @@ const Navbar = () => {
               <span className="sm:block hidden">Allecc</span>
             </p>
           </Link>
-          {renderNavLinks(false)}
+          {renderNavLinks()}
           <div className="sm:hidden flex flex-1 justify-end items-center">
-            <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-[28px] h-[18px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-            <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${
-                toggle ? 'flex' : 'hidden'
-              }`}
-            >
-              {renderNavLinks(true)}
+            <div className="burger-icon" onClick={toggleSidebar}>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>

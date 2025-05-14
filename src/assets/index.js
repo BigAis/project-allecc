@@ -1,16 +1,19 @@
-// Import company logos
-import mathwork from "./company/mathwork.png";
-import edunet from "./company/edunet.png";
-import eduskill from "./company/eduskill.png";
+// Import company logos for Milestones
+import mathwork from "./company/ProjectAllecc Logo3.png";
+import edunet from "./company/ProjectAllecc Logo3.png";
+import eduskill from "./company/ProjectAllecc Logo3.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
+import csharp from "./tech-stack/csharp.png";
 import c from "./tech-stack/c.png";
 import cpp from "./tech-stack/cpp.png";
 import java from "./tech-stack/java.png";
-
+import ue from "./tech-stack/Unreal_Engine-Logo.wine.png";
+import unity from "./tech-stack/Unity_Technologies-Logo.wine.png";
+import blender from "./tech-stack/Blender_(software)-Logo.wine.png";
 // Import project images
-import weatherpedia from "./projects/WeatherPedia.png";
+import weatherpedia from "./projects/EdSplash.png";
 import termpw from "./projects/termpw.png";
 import payloadmaster from "./projects/payloadmaster.png";
 import mhft from "./projects/mhft.png";
@@ -28,7 +31,7 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
 
 // Import common assets
-import logo from "./logo.svg";
+import logo from "./ProjectAllecc Logo.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -41,7 +44,11 @@ export {
   cpp,
   java,
   github,
+  csharp,
   css,
+  blender,
+  ue,
+  unity,
   git,
   html,
   javascript,

@@ -6,6 +6,10 @@ import {
   javascript,
   html,
   css,
+  csharp,
+  ue,
+  unity,
+  blender,
   reactjs,
   tailwind,
   nodejs,
@@ -45,32 +49,35 @@ export const navLinks = [
 
 export const companyValues = [
   { 
-    title: "Innovation", 
-    icon: c 
+    title: "Unreal Engine Expertise", 
+    icon: ue 
   },
   { 
-    title: "Quality", 
-    icon: cpp 
+    title: "Unity Development", 
+    icon: unity 
   },
   { 
-    title: "Player Experience", 
-    icon: python 
+    title: "3D Modeling and Animation", 
+    icon: blender 
   },
-  { 
-    title: "Community", 
-    icon: java 
-  },
+  
 ];
 
 export const technologies = [
-  { name: "Unreal Engine", icon: html },
-  { name: "Unity", icon: css },
-  { name: "C++", icon: javascript },
-  { name: "C#", icon: reactjs },
-  { name: "Blender", icon: tailwind },
-  { name: "Maya", icon: nodejs },
-  { name: "ZBrush", icon: threejs },
+  { name: "HTML", icon: html },
+  { name: "CSS", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "ReactJS", icon: reactjs },
+  { name: "Tailwind", icon: tailwind },
+  { name: "Nodejs", icon: nodejs },
+  { name: "Threejs", icon: threejs },
   { name: "Git", icon: git },
+  { name: "Python", icon: python },
+  { name: "C", icon: c },
+  { name: "C++", icon: cpp },
+  { name: "C#", icon: csharp },
+  { name: "Java", icon: java },
+
 ];
 
 export const companyHistory = [

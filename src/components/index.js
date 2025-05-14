@@ -7,6 +7,7 @@ import {
 
 import Hero from "./Hero";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 import About from "./About";
 import Tech from "./Tech";
 import TeamHistory from "./TeamHistory";
@@ -16,6 +17,7 @@ import Contact from "./Contact";
 export {
   Hero,
   Navbar,
+  Sidebar,
   About,
   Tech,
   TeamHistory,

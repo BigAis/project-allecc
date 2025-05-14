@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { About, Contact, TeamHistory, Hero, Navbar, StarsCanvas, Tech, Games } from './components';
+import Sidebar from './components/Sidebar';
 
 const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <BrowserRouter
       future={{
@@ -12,7 +19,8 @@ const App = () => {
     >
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
+          <Navbar toggleSidebar={toggleSidebar} />
+          <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
           <Hero />
         </div>
         <About />
