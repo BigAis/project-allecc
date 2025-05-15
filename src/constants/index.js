@@ -87,7 +87,7 @@ export const companyHistory = [
     teamMember: "Ioannis Papadopoulos",
     icon: mathwork,
     iconBg: "#161329",
-    date: "Jan 2021 - Present",
+    date: "Jan 2025 - Present",
     points: [
       "Founded Project Allecc with a vision to create innovative sci-fi games that challenge conventional gameplay.",
       "Developed the core gameplay mechanics for 'Lizards Vs Humans', focusing on species-specific abilities and balanced combat.",
@@ -101,7 +101,7 @@ export const companyHistory = [
     teamMember: "Vasilios Chiliaridis",
     icon: eduskill,
     iconBg: "#161329",
-    date: "Mar 2021 - Present",
+    date: "Mar 2025 - Present",
     points: [
       "Conceptualized and designed the game mechanics for 'Lizards Vs Humans', focusing on unique abilities for each species.",
       "Created the game world lore and narrative structure, establishing the conflict between humans and reptilians.",
@@ -130,7 +130,7 @@ export const companyHistory = [
     teamMember: "Company Milestone",
     icon: mathwork,
     iconBg: "#161329",
-    date: "October 2024",
+    date: "October 2025",
     points: [
       "Successfully launched 'Lizards Vs Humans' in Early Access on Steam.",
       "Reached over 50,000 players in the first month.",

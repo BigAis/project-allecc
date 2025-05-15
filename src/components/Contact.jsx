@@ -1,26 +1,11 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import "../index.css";
-
-const InputField = ({ label, value, onChange, placeholder, name, type }) => (
-  <label className="flex flex-col">
-    <span className="text-white font-medium mb-4">{label}</span>
-    <input
-      type={type}
-      name={name}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-    />
-  </label>
-);
 
 const Contact = () => {
   const formRef = useRef();
@@ -49,10 +34,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Clear previous error messages
     setEmailError("");
     setNameError("");
     setConfirmation("");
 
+    // Validate form fields
     if (!validateEmail(form.email)) {
       setEmailError("Please enter a valid email address.");
       return;
@@ -63,36 +51,39 @@ const Contact = () => {
       return;
     }
 
+    // Set loading state
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
-        {
-          from_name: form.name,
-          to_name: "Project Allecc",
-          from_email: form.email,
-          to_email: "projectallecc@gmail.com",
-          message: form.message,
-        },
-        "p-gXzzyvEhPaJ0XA-"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setConfirmation("Thank you for your message! Our team will get back to you soon.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+    // Create a new FormData object
+    const formData = new FormData(formRef.current);
+    
+    // The form will be submitted to Formsubmit.co
+    fetch("https://formsubmit.co/projectallecc@gmail.com", {
+      method: "POST",
+      body: formData,
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
         }
-      )
-      .catch((error) => {
+        return response.text();
+      })
+      .then(() => {
+        // Handle success
         setLoading(false);
-        console.error(error);
+        setConfirmation("Thank you for your message! Our team will get back to you soon.");
+        
+        // Reset form fields
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch(error => {
+        // Handle error
+        console.error("Error:", error);
+        setLoading(false);
         setConfirmation("Something went wrong. Please try again later.");
       });
   };
@@ -103,35 +94,60 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact Us</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
-          <InputField
-            label="Your Name"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="What's your name?"
-            type="text"
-          />
-          {nameError && <span className="text-red-500">{nameError}</span>}
+        <form 
+          ref={formRef} 
+          onSubmit={handleSubmit} 
+          className="mt-12 flex flex-col gap-8"
+          action="https://formsubmit.co/projectallecc@gmail.com" 
+          method="POST"
+        >
+          {/* Formsubmit.co configuration options */}
+          <input type="hidden" name="_subject" value="New message from Project Allecc website!" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value={window.location.href} />
+          
+          {/* Honeypot field to prevent spam */}
+          <input type="text" name="_honey" style={{ display: "none" }} />
 
-          <InputField
-            label="Email Address"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="What's your email address?"
-            type="email"
-          />
-          {emailError && <span className="text-red-500">{emailError}</span>}
+          {/* Form fields */}
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Name</span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="What's your name?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+            {nameError && <span className="text-red-500 mt-2">{nameError}</span>}
+          </label>
 
-          <InputField
-            label="Your Message"
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="What would you like to say?"
-            type="text"
-          />
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Email Address</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="What's your email address?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+            {emailError && <span className="text-red-500 mt-2">{emailError}</span>}
+          </label>
+
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              rows={7}
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What would you like to say?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
 
           <button
             type="submit"
