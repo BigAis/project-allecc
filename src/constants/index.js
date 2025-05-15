@@ -82,13 +82,14 @@ export const technologies = [
 
 export const companyHistory = [
   {
-    title: "CEO & Founder",
+    title: "CEO & Lead Developer",
     teamMember: "Ioannis Papadopoulos",
     icon: mathwork,
     iconBg: "#161329",
     date: "Jan 2021 - Present",
     points: [
       "Founded Project Allecc with a vision to create innovative sci-fi games that challenge conventional gameplay.",
+      "Developed the core gameplay mechanics for 'Lizards Vs Humans', focusing on species-specific abilities and balanced combat.",
       "Led the conceptualization and early development of 'Lizards Vs Humans'.",
       "Built a team of passionate developers, artists, and designers to bring our games to life.",
       "Secured initial funding and established partnerships with key industry players.",
@@ -96,30 +97,33 @@ export const companyHistory = [
   },
   {
     title: "Lead Game Designer",
-    teamMember: "Maria Konstantinou",
+    teamMember: "Vasilios Chiliaridis",
     icon: eduskill,
     iconBg: "#161329",
     date: "Mar 2021 - Present",
     points: [
-      "Developed the core gameplay mechanics for 'Lizards Vs Humans', focusing on species-specific abilities and balanced combat.",
+      "Conceptualized and designed the game mechanics for 'Lizards Vs Humans', focusing on unique abilities for each species.",
       "Created the game world lore and narrative structure, establishing the conflict between humans and reptilians.",
       "Designed diverse game environments, from urban battlegrounds to alien landscapes.",
       "Collaborates closely with art and development teams to ensure design vision is properly implemented.",
     ],
   },
   {
-    title: "Lead Developer",
-    teamMember: "Dimitris Alexiou",
-    icon: edunet,
+    title: "What We Offer",
+    teamMember: "Our Capabilities",
+    icon: eduskill,
     iconBg: "#161329",
-    date: "Apr 2021 - Present",
+    date: "Available Worldwide",
     points: [
-      "Leads the technical development of our Unreal Engine-based game systems.",
-      "Architected the networking infrastructure for multiplayer gameplay with emphasis on performance and anti-cheat measures.",
-      "Implemented advanced AI systems for NPC behaviors in campaign mode.",
-      "Mentors junior developers and establishes technical best practices for the studio.",
+      "Full-cycle Game Development using Unreal Engine and Unity, including gameplay systems, world design, and multiplayer infrastructure.",
+      "Responsive Web Development with modern stacks like React, Next.js, and WordPress, optimized for performance and UX.",
+      "AI Development for games, tools, and business automation—ranging from NPC behavior systems to custom GPT integrations.",
+      "UI/UX Design tailored to both web and gaming applications, combining aesthetic design with functional user experience.",
+      "Backend & API Development using scalable architectures with Node.js, Django, or Laravel.",
+      "Cross-platform deployment and optimization for desktop, mobile, and cloud-based environments.",
     ],
   },
+
   {
     title: "Early Access Launch",
     teamMember: "Company Milestone",
