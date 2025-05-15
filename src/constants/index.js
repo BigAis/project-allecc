@@ -179,40 +179,4 @@ export const games = [
     image: mhft, // Replace with actual game image
     game_link: "https://www.projectallecc.com/neural-nexus",
   },
-  {
-    name: "Reptilian Rising",
-    description:
-      "A mobile strategy game set in the 'Lizards Vs Humans' universe. Build your base, train troops, and conquer territories in an ongoing faction war.",
-    tags: [
-      { name: "Mobile", color: "blue-text-gradient" },
-      { name: "Strategy", color: "green-text-gradient" },
-      { name: "Free-to-Play", color: "pink-text-gradient" },
-    ],
-    image: payloadmaster, // Replace with actual game image
-    game_link: "https://play.google.com/store/apps/reptilianrising",
-  },
-  {
-    name: "Echoes of Extinction",
-    description:
-      "A narrative-driven adventure about the last human survivor on a post-apocalyptic Earth. Discover what happened to humanity while avoiding alien hunters.",
-    tags: [
-      { name: "Adventure", color: "blue-text-gradient" },
-      { name: "Horror", color: "green-text-gradient" },
-      { name: "Survival", color: "pink-text-gradient" },
-    ],
-    image: CompileVortex, // Replace with actual game image
-    game_link: "https://www.projectallecc.com/echoes-of-extinction",
-  },
-  {
-    name: "Venom Labs",
-    description:
-      "A VR experience where players take on the role of a reptilian scientist developing biological weapons. Features realistic lab simulation and moral choices.",
-    tags: [
-      { name: "VR", color: "blue-text-gradient" },
-      { name: "Simulation", color: "green-text-gradient" },
-      { name: "Sci-Fi", color: "pink-text-gradient" },
-    ],
-    image: sketcher, // Replace with actual game image
-    game_link: "https://www.oculus.com/experiences/venom-labs",
-  },
 ];
