@@ -20,6 +20,7 @@ import {
   payloadmaster,
   threejs,
   mhft,
+  thronefall_cover,
   sketcher,
   mathwork,
   CompileVortex,
@@ -154,17 +155,18 @@ export const games = [
     game_link: "https://store.steampowered.com/app/lizardsvhumans",
   },
   {
-    name: "Cosmic Pioneers",
+    name: "Thronefall: Eclipse",
     description:
-      "A space exploration sandbox game where players discover new planets, establish colonies, and uncover ancient alien technologies. Currently in early development.",
+      "Step into a dark medieval fantasy world where myth and steel collide. Explore ancient ruins, scale castle walls with parkour and battle legendary foes in intense duels or massive sieges. A rich multiplayer experience where every fight shapes your legend.",
     tags: [
-      { name: "Sandbox", color: "blue-text-gradient" },
-      { name: "Space", color: "green-text-gradient" },
-      { name: "Exploration", color: "pink-text-gradient" },
+      { name: "Souls-like", color: "pink-text-gradient" },
+      { name: "MMORPG", color: "pink-text-gradient" },
+      { name: "Unreal Engine", color: "yellow-text-gradient" },
     ],
-    image: termpw, // Replace with actual game image
-    game_link: "https://www.projectallecc.com/cosmic-pioneers",
+    image: thronefall_cover, // Replace with actual game image variable
+    game_link: "https://store.steampowered.com/app/thronefall",
   },
+
   {
     name: "Neural Nexus",
     description:

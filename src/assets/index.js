@@ -19,6 +19,7 @@ import payloadmaster from "./projects/payloadmaster.png";
 import mhft from "./projects/mhft.png";
 import sketcher from "./projects/sketcher.png";
 import CompileVortex from "./projects/CompileVortex.png";
+import thronefall_cover from "./projects/thronefall_cover.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -57,6 +58,7 @@ export {
   tailwind,
   threejs,
   weatherpedia,
+  thronefall_cover,
   termpw,
   payloadmaster,
   mhft,
