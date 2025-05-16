@@ -17,18 +17,30 @@ const App = () => {
         v7_relativeSplatPath: true,
       }}
     >
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar toggleSidebar={toggleSidebar} />
-          <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-          <Hero />
-        </div>
-        <About />
-        <TeamHistory />
-        <Tech />
-        <Games />
-        <div className="relative z-0">
+      <div className="relative bg-primary">
+        {/* Background image - only in hero section */}
+        <div className="relative">
+          <div className="relative bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <Navbar toggleSidebar={toggleSidebar} />
+            <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+            <Hero />
+          </div>
+          
+          <About />
+          <TeamHistory />
+          <Tech />
+          <Games />
           <Contact />
+        </div>
+        
+        {/* Stars overlay with explicit pointer-events-none styling */}
+        <div 
+          className="fixed inset-0" 
+          style={{ 
+            zIndex: 50,
+            pointerEvents: "none" // inline style to ensure it's applied
+          }}
+        >
           <StarsCanvas />
         </div>
       </div>
