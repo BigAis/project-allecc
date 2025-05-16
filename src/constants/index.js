@@ -168,9 +168,9 @@ export const games = [
   },
 
   {
-    name: "Neural Nexus",
+    name: "Big Fellos: Fanistasy",
     description:
-      "A cyberpunk puzzle adventure where players hack into digital systems using neural implants. Navigate corporate security and uncover a global conspiracy.",
+      "A cyberpunk adventure where players hack into digital systems using neural implants called FANTUM. Navigate corporate security and uncover a global conspiracy.",
     tags: [
       { name: "Cyberpunk", color: "blue-text-gradient" },
       { name: "Puzzle", color: "green-text-gradient" },
