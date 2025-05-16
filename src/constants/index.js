@@ -109,6 +109,19 @@ export const companyHistory = [
       "Collaborates closely with art and development teams to ensure design vision is properly implemented.",
     ],
   },
+    {
+    title: "Lead Sound Engineer",
+    teamMember: "Paraskevas Pardalidis",
+    icon: eduskill,
+    iconBg: "#161329",
+    date: "Mar 2025 - Present",
+    points: [
+      "Leads the audio design for 'Lizards Vs Humans', defining the sound identity for both the human and reptilian factions.",
+      "Composes original soundtracks that reflect the tone of each game environment, from war-torn cities to alien jungles.",
+      "Designs immersive soundscapes and real-time audio effects that enhance combat, dialogue, and exploration sequences.",
+      "Collaborates with the narrative, design, and programming teams to reinforce storytelling and game feel through sound.",
+    ],
+  },
   {
     title: "What We Offer",
     teamMember: "Our Capabilities",
