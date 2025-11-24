@@ -165,7 +165,7 @@ export const games = [
       { name: "Unreal Engine", color: "yellow-text-gradient" },
     ],
     image: weatherpedia, // Replace with actual game image
-    game_link: "https://store.steampowered.com/app/lizardsvhumans",
+    game_link: "https://store.steampowered.com/app/3748620/Lizards_VS_Humans/",
   },
   {
     name: "Thronefall: Eclipse",
